@@ -77,3 +77,5 @@ cc65-c64/
 ![template_wizard](pics/template.png)
 
 ![ide](pics/ide.png)
+
+![run](pics/run.png)
