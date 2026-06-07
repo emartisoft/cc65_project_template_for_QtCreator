@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "supportedProjectTypes": [ "CMakeProjectManager.CMakeProject" ],
+    "id": "X.C64.cc65",
+    "category": "I.Projects",
+    "trDescription": "Creates a C64 project using the cc65 cross-compiler. Builds .prg files, runs via VICE emulator.",
+    "trDisplayName": "C64 Application (cc65)",
+    "trDisplayCategory": "Non-Qt Project",
+    "icon": "../../global/consoleapplication.png",
+    "iconKind": "Themed",
+    "enabled": "%{JS: isPluginRunning('cppeditor') && isPluginRunning('cmakeprojectmanager')}",
+
+    "options":
+    [
+        { "key": "ProjectFile", "value": "%{ProjectDirectory}/CMakeLists.txt" },
+        { "key": "CMakeFile", "value": "%{ProjectDirectory}/CMakeLists.txt" },
+        { "key": "CFileName", "value": "%{JS: 'main.' + Util.preferredSuffix('text/x-csrc')}" }
+    ],
+
+    "pages":
+    [
+        {
+            "trDisplayName": "Project Location",
+            "trShortTitle": "Location",
+            "typeId": "Project"
+        },
+        {
+            "trDisplayName": "Kit Selection",
+            "trShortTitle": "Kits",
+            "typeId": "Kits",
+            "data": { "projectFilePath": "%{ProjectFile}" }
+        },
+        {
+            "trDisplayName": "Project Management",
+            "trShortTitle": "Summary",
+            "typeId": "Summary"
+        }
+    ],
+    "generators":
+    [
+        {
+            "typeId": "File",
+            "data":
+            [
+                {
+                    "source": "CMakeLists.txt",
+                    "openAsProject": true
+                },
+                {
+                    "source": "cc65-toolchain.cmake"
+                },
+                {
+                    "source": "main.c",
+                    "target": "%{CFileName}",
+                    "openInEditor": true
+                },
+                {
+                    "source": "include/c64.h",
+                    "target": "include/c64.h"
+                }
+            ]
+        }
+    ]
+}
