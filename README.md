@@ -40,7 +40,9 @@ Copy the entire `cc65-c64` directory into Qt Creator's project templates folder:
   xcopy /E cc65-c64 C:\Qt\Tools\QtCreator\share\qtcreator\templates\wizards\projects\cc65-c64\
   ```
 - macOS
+```
   Copy cc65-c64 folder to '/Users/????/Qt/Qt Creator.app/Contents/Resources/templates/wizards/projects/cc65-c64'
+```
 
 Restart Qt Creator. The template appears under **File → New Project → Non-Qt Project → C64 Application (cc65)**.
 
