@@ -78,3 +78,7 @@ cc65-c64/
 ├── main.c                   # Sample source file
 └── wizard.json              # Qt Creator wizard definition
 ```
+
+![template_wizard](pics/template.png)
+
+![ide](pics/ide.png)
