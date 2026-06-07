@@ -12,7 +12,7 @@ A Qt Creator project template for developing Commodore 64 applications using the
 
 | Tool | Purpose |
 |------|---------|
-| **Qt Creator** 16+ | Tested on 19.0.2; `FOLDER "qtc_runnable"` requires Qt Creator 16+ |
+| **Qt Creator** 16+ | Tested on 19.0.2; requires Qt Creator 16+ |
 | **CMake** 3.20+ | Usually bundled with Qt Creator |
 | **cc65** (>= 2.19) | C64 cross-compiler (`cl65` must be in PATH) |
 | **VICE** (or any C64 emulator) | Emulator application |
